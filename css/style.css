@@ -8,7 +8,7 @@ body {
 	src: url(../fonts/batmfo__.ttf);
 }
 
-clearfix:after {
+.clearfix:after {
   content: " "; /* Older browser do not support empty content */
   visibility: hidden;
   display: block;
@@ -39,6 +39,11 @@ clearfix:after {
 	display: inline-block
 }
 
+.navbar .navbar-list .navbar-item a:hover {
+	color: #F7F7F7;
+	background-color: #A4A4A4;
+}
+
 .title {
 	position: absolute;
 	left: 0;
@@ -64,4 +69,14 @@ clearfix:after {
 	text-align: center;
 	font-family: batman;
 	font-size: 28px;
+}
+
+.about-me .batman-video {
+	max-width: 50%;
+	float: left;
+}
+
+.about-me .batman-info {
+	max-width: 50%;
+	float: right;
 }
