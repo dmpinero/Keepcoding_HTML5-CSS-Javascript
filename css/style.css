@@ -1,1 +1,8 @@
-style.css
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+@font-face {
+	font-family: batman;
+	src: url(../fonts/batman.batmfo__.ttf);
+}
