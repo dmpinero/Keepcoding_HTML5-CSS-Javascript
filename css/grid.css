@@ -6,6 +6,12 @@
 	clear: both;
 }
 
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
 .col-1 {
 	width: 8.33333333%;
 	float: left;
