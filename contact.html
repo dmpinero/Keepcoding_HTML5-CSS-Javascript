@@ -1,108 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
-	<head>
-		<title>Batman</title>
-		<meta charset="utf-8">
-	</head>
-	<body>
-		<nav>
-			<ul>
-				<li>
-					<a href="index.html">Inicio</a>
-				</li>
-				<li>
-					<a href="index.html">Quién soy</a>
-				</li>
-				<li>
-					<a href="index.html">Equipo</a>
-					</li>
-				<li>
-					<a href="index.html">Transporte</a>
-					</li>
-				<li>
-					<a href="index.html">Contacto</a>
-				</li>
-			</ul>
-		</nav>
-		<section>
-			<h2>Contacta con nosotros</h2>
-			<div>
-				<div id="googleMap"></div>
-			</div>
 
-			<div>
-				
-			</div>
-			<form name="contact-batman" method="get">
-				<div>
-					<label for="nombre">Nombre:</label>
-					<input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-					<label for="apellidos">Apellidos:</label>
-					<input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
-				</div>
+<head>
+    <title>Batman</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
+</head>
 
-				<div>
-					<label for="email">Email:</label>
-					<input type="email" id="email" name="email" placeholder="name@company.com" pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required>
-				</div>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-list">
+            <li class="navbar-item">
+                <a href="#">Inicio</a>
+            </li>
+            <li class="navbar-item">
+                <a href="index.html">Quién soy</a>
+            </li>
+            <li class="navbar-item">
+                <a href="index.html">Equipo</a>
+            </li class="navbar-item">
+            <li class="navbar-item">
+                <a href="index.html">Transporte</a>
+            </li>
+            <li class="navbar-item">
+                <a href="index.html">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Contacta con nosotros</h2>
+        <div>
+            <div id="googleMap"></div>
+        </div>
+        <div>
+        </div>
+        <form name="contact-batman" method="get">
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="name@company.com" pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required>
+            </div>
+            <div>
+                <label for="tipo_mision_1">Consulta</label>
+                <input type="radio" id="tipo_mision_1" name="tipo_mision" value="Consulta" required>
+                <label for="tipo_mision_2">Misión simple</label>
+                <input type="radio" id="tipo_mision_2" name="tipo_mision" value="Misión simple" required>
+                <label for="tipo_mision_3">Rescate</label>
+                <input type="radio" id="tipo_mision_3" name="tipo_mision" value="Rescate" required>
+                <label for="tipo_mision_4">Salvar Gotham</label>
+                <input type="radio" id="tipo_mision_4" name="tipo_mision" value="Salvar Gotham" required>
+            </div>
+            <div>
+                <label for="ejercito">Tamaño del ejército</label>
+                <input type="number" id="ejercito" name="ejercito" min="20" required="">
+            </div>
+            <div>
+                <label for="fecha">Fecha de la miisión</label>
+                <input type="date" id="fecha" name="fecha" required="">
+            </div>
+            <div>
+                <input type="submit" name="Enviar">
+            </div>
+        </form>
+    </section>
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo de servicio</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Consulta de misión</td>
+                    <td>100 €</td>
+                </tr>
+                <tr>
+                    <td>Misión simple</td>
+                    <td>500 €</td>
+                </tr>
+                <tr>
+                    <td>Rescate</td>
+                    <td>1000 €</td>
+                </tr>
+                <tr>
+                    <td>Salvar Gotham</td>
+                    <td>15000 €</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <footer>
+        Daniel Martínez Piñero &copy; 2016 Keepcoding.io
+    </footer>
+</body>
 
-				<div>
-					<label for="tipo_mision_1">Consulta</label>
-					<input type="radio" id="tipo_mision_1" name="tipo_mision" value="Consulta" required>
-					<label for="tipo_mision_2">Misión simple</label>
-					<input type="radio" id="tipo_mision_2" name="tipo_mision" value="Misión simple" required>
-					<label for="tipo_mision_3">Rescate</label>
-					<input type="radio" id="tipo_mision_3" name="tipo_mision" value="Rescate" required>
-					<label for="tipo_mision_4">Salvar Gotham</label>
-					<input type="radio" id="tipo_mision_4" name="tipo_mision" value="Salvar Gotham" required>
-				</div>
-
-				<div>
-					<label for="ejercito">Tamaño del ejército</label>
-					<input type="number" id="ejercito" name="ejercito" min="20" required="">
-				</div>
-
-				<div>
-					<label for="fecha">Fecha de la miisión</label>
-					<input type="date" id="fecha" name="fecha" required="">
-				</div>
-
-				<div>
-					<input type="submit" name="Enviar">
-				</div>
-			</form>
-		</section>
-
-		<section>
-			<table>
-				<thead>
-					<tr>
-						<th>Tipo de servicio</th>
-						<th>Precio</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Consulta de misión</td>
-						<td>100 €</td>
-					</tr>
-					<tr>
-						<td>Misión simple</td>
-						<td>500 €</td>
-					</tr>
-					<tr>
-						<td>Rescate</td>
-						<td>1000 €</td>
-					</tr>								
-					<tr>
-						<td>Salvar Gotham</td>
-						<td>15000 €</td>
-					</tr>
-				</tbody>					
-			</table>
-		</section>
-		<footer>
-			Daniel Martínez Piñero &copy; 2016 Keepcoding.io
-		</footer>		
-	</body>	
-</html>	
+</html>
