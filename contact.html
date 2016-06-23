@@ -6,6 +6,29 @@
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+    function initialize() {
+        var myLatLng = {
+            lat: 42.762480,
+            lng: -83.283406
+        };
+
+        var mapProp = {
+            center: myLatLng,
+            zoom: 15,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Aqui estamos'
+        });
+    }
+    google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 </head>
 
 <body>
@@ -28,48 +51,50 @@
             </li>
         </ul>
     </nav>
-    <section>
-        <h2>Contacta con nosotros</h2>
-        <div>
-            <div id="googleMap"></div>
-        </div>
-        <div>
-        </div>
-        <form name="contact-batman" method="get">
-            <div>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
-                <label for="apellidos">Apellidos:</label>
-                <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+    <div class="container">
+        <section class="row section-container">
+            <h2>Contacta con nosotros</h2>
+            <div class="col-6">
+                <div id="googleMap"></div>
             </div>
             <div>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="name@company.com" pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required>
             </div>
-            <div>
-                <label for="tipo_mision_1">Consulta</label>
-                <input type="radio" id="tipo_mision_1" name="tipo_mision" value="Consulta" required>
-                <label for="tipo_mision_2">Misión simple</label>
-                <input type="radio" id="tipo_mision_2" name="tipo_mision" value="Misión simple" required>
-                <label for="tipo_mision_3">Rescate</label>
-                <input type="radio" id="tipo_mision_3" name="tipo_mision" value="Rescate" required>
-                <label for="tipo_mision_4">Salvar Gotham</label>
-                <input type="radio" id="tipo_mision_4" name="tipo_mision" value="Salvar Gotham" required>
-            </div>
-            <div>
-                <label for="ejercito">Tamaño del ejército</label>
-                <input type="number" id="ejercito" name="ejercito" min="20" required="">
-            </div>
-            <div>
-                <label for="fecha">Fecha de la miisión</label>
-                <input type="date" id="fecha" name="fecha" required="">
-            </div>
-            <div>
-                <input type="submit" name="Enviar">
-            </div>
-        </form>
-    </section>
-    <section>
+            <form class="form" name="contact-batman" method="get">
+                <div class="form-row">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+                </div>
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="name@company.com" pattern="[A-Za-z0-9\.\+]+@[A-Za-z0-9]+\.[A-Za-z0-9\.]+" required>
+                </div>
+                <div class="form-row">
+                    <label for="tipo_mision_1">Consulta</label>
+                    <input type="radio" id="tipo_mision_1" name="tipo_mision" value="Consulta" required>
+                    <label for="tipo_mision_2">Misión simple</label>
+                    <input type="radio" id="tipo_mision_2" name="tipo_mision" value="Misión simple" required>
+                    <label for="tipo_mision_3">Rescate</label>
+                    <input type="radio" id="tipo_mision_3" name="tipo_mision" value="Rescate" required>
+                    <label for="tipo_mision_4">Salvar Gotham</label>
+                    <input type="radio" id="tipo_mision_4" name="tipo_mision" value="Salvar Gotham" required>
+                </div>
+                <div class="form-row">
+                    <label for="ejercito">Tamaño del ejército</label>
+                    <input type="number" id="ejercito" name="ejercito" min="20" required>
+                </div>
+                <div class="form-row">
+                    <label for="fecha">Fecha de la misión</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+                <div class="form-row">
+                    <input type="submit" name="Enviar">
+                </div>
+            </form>
+        </section>
+    </div>
+    <section class="section-container">
         <table>
             <thead>
                 <tr>
@@ -97,7 +122,7 @@
             </tbody>
         </table>
     </section>
-    <footer>
+    <footer class="footer">
         Daniel Martínez Piñero &copy; 2016 Keepcoding.io
     </footer>
 </body>
