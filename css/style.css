@@ -68,6 +68,9 @@ body {
 	font-family: batman;
 	text-align: center;
 	font-size: 100px;
+	animation: titleAnimation 2s forwards;
+	visibility: hidden;
+	animation-delay: 0.8s;
 }
 
 .title-img {
@@ -93,6 +96,9 @@ body {
 	text-align: center;
 	font-family: batman;
 	font-size: 28px;
+	opacity: 0;
+	animation: suttileAnimation 3s forwards;
+	animation-delay: 1s;
 }
 
 .about-me .batman-video {
@@ -232,4 +238,33 @@ tbody > tr:hover {
 .section-container {
 	padding-top: 50px;
 	padding-bottom: 50px;
+}
+
+@keyframes titleAnimation {
+	0% {
+		font-size: 200px;
+	}
+
+	50% {
+		font-size: 180px
+	}
+
+	100% {
+		font-size: 100px;
+		visibility: visible;
+	}
+}
+
+@keyframes suttileAnimation {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
