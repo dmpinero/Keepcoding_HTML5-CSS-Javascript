@@ -212,7 +212,7 @@ input {
 	border-radius: 4px;
 }
 
-input[type=button], input[type=submit], input[type=reset], button[type=submit]  {
+input[type=button], input[type=submit], input[type=reset], button {
 	background-color: #4CAF50;
 	border: none;
 	color: white;
@@ -223,13 +223,13 @@ input[type=button], input[type=submit], input[type=reset], button[type=submit]  
 	border-radius: 0px;
 }
 
+#too-many-enemies {
+	display: none;
+}
+
 table {
 	width: 100%;
 	border-collapse: collapse;
-}
-
-#too-many-enemies {
-	display: none;
 }
 
 thead > tr {
@@ -278,4 +278,16 @@ tbody > tr:hover {
 	100%{
 		opacity: 1;
 	}
+}
+
+.no-flexbox .transport {
+	overflow: auto;
+}
+
+.no-flexbox .transport .item-1 {
+	float: left;
+}
+
+.no-flexbox .transport .item-2 {
+	float: right;
 }

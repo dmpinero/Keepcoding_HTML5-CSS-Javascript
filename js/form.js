@@ -1,7 +1,30 @@
+if (!Modernizr.inputtypes.date){
+	$('<link/>', {
+		rel: 'stylesheet',
+		type: 'text/css',
+		href: 'https://code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css'
+	}).appendTo('head');
+
+	$.getScript('https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js')
+		.done(function() {
+			$('input[type="date"]').datepicker({
+				dateFormat: 'yy-mm-dd'
+			});
+		});
+}
+
+if (!Modernizr.inputtypes.number) {
+	$.getScript('js/number-polyfill.js');
+}
+
 var form = document.getElementById("form-contact");
 
 var loadingButton = document.createElement('i');
-loadingButton.classList.add("fa", "fa-spinner", "fa-spin");
+if (Modernizr.classList) {
+	loadingButton.classList.add("fa", "fa-spinner", "fa-spin");
+} else {
+	loadingButton.className += "fa fa-spinner fa-spin";
+}
 
 var apellidosInput = document.getElementsByName("tienes_apellidos");
 var tooManyEnemies = document.getElementById("too-many-enemies");
@@ -112,7 +135,17 @@ form.addEventListener("submit", function(evt){
 
 	setTimeout(function(){
 		submitInput.removeChild(loadingButton);
+		sendNotification("Formulario recibido", "Yo soy el body");
 	}, 1000);
 
 
 });
+
+
+
+
+
+
+
+
+
